@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forex Trading Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav class="bg-blue-600 text-white p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">ForexPro</h1>
+            <div class="flex space-x-4">
+                <button class="px-4 py-2 bg-blue-700 rounded">Login</button>
+                <button class="px-4 py-2 bg-green-600 rounded">Sign Up</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mx-auto p-4">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+            <!-- Chart Section -->
+            <div class="lg:col-span-2 bg-white rounded-lg shadow p-4">
+                <canvas id="chart-container" class="h-96"></canvas>
+            </div>
+            
+            <!-- Trading Panel -->
+            <div class="bg-white rounded-lg shadow p-4">
+                <h2 class="text-xl font-semibold mb-4">Trade</h2>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Currency Pair</label>
+                        <select class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                            <option>EUR/USD</option>
+                            <option>GBP/USD</option>
+                            <option>USD/JPY</option>
+                            <option>AUD/USD</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Amount</label>
+                        <input type="number" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                    </div>
+                    <div class="grid grid-cols-2 gap-2">
+                        <button class="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600">Buy</button>
+                        <button class="bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600">Sell</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
